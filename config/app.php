@@ -305,10 +305,11 @@ return [
             /**
              * Se agregan los parámetros necesarios para realziar la conexión a base de datos.
              */
-            'username' => 'root',
-            'password' => '',
+            'host' => 'us-cdbr-east-04.cleardb.com',
+            'username' => 'b7a604c51835b5',
+            'password' => '96ddebab',
 
-            'database' => 'kirebeproject',
+            'database' => 'heroku_007f8535908c20c',
 
 
             /*
