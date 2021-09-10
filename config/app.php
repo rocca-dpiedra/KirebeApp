@@ -294,6 +294,7 @@ return [
             'driver' => Mysql::class,
             'persistent' => false,
             'timezone' => 'UTC',
+            'host' => 'localhost',
 
             /*
              * For MariaDB/MySQL the internal default changed from utf8 to utf8mb4, aka full utf-8 support, in CakePHP 3.6
@@ -305,7 +306,6 @@ return [
             /**
              * Se agregan los parámetros necesarios para realziar la conexión a base de datos.
              */
-            'host' => 'us-cdbr-east-04.cleardb.com', //Esta línea no estaba yo la agregué... Darío Deploy
             'username' => 'b7a604c51835b5',
             'password' => '96ddebab',
 
