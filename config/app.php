@@ -305,7 +305,7 @@ return [
             /**
              * Se agregan los parámetros necesarios para realziar la conexión a base de datos.
              */
-            'host' => 'us-cdbr-east-04.cleardb.com',
+            'host' => 'us-cdbr-east-04.cleardb.com', //Esta línea no estaba yo la agregué... Darío Deploy
             'username' => 'b7a604c51835b5',
             'password' => '96ddebab',
 

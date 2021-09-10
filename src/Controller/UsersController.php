@@ -28,7 +28,7 @@ class UsersController extends AppController
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
-        $this->Auth->allow(['logout', 'add']);
+        $this->Auth->allow(['logout']);
     }
 
     /**  ===================================================================================Comentario Darío ====================================================================
