@@ -1,0 +1,232 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:  sans-serif;
+    background: url("../img/login-bg.jpg") top center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav{
+    display: none;
+}
+
+.header{
+    background: transparent;
+    box-shadow: none;
+}
+
+.header__toggle{
+    display: none;
+}
+
+.main{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+
+.center{
+    width: auto;
+    max-width: 800px;
+    background: transparent;
+    border-radius: 4px;
+
+    padding: 15px;
+    border: 1px double silver;
+}
+
+.center h1{
+    text-align: center;
+    color: white;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    font-size: 4rem;
+}
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .campoTexto{
+    position: relative;
+    border-bottom: 1px solid black;
+    margin: 30px 0;
+}
+
+.campoTexto input{
+    width: 100%;
+    padding: 0 5px;
+    height: 50px;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    outline: none;
+
+    color: black;
+}
+
+.campoTexto label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: white;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    font-weight: 700;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.campoTexto span::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #d33c43;
+    transition: .5s;
+}
+
+.campoTexto input:focus ~ label,
+.campoTexto input:valid ~ label{
+    top: -7px;
+    background: #d33c43;
+    padding-left: 10px;
+    font-size: 2rem;
+}
+
+.campoTexto input:focus,
+.campoTexto input:valid{
+    background: gainsboro;
+}
+
+.campoTexto input:focus ~ span::before,
+.campoTexto input:valid ~ span::before{
+    width: 100%;
+}
+
+input[type="submit"]{
+    width: 100% !important;
+    height: 50px !important;
+    border: none !important;
+    background: #d33c43 !important;
+    border-radius: 4px !important;
+    font-size: 2rem !important;
+    color: white !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    outline: none !important;
+    margin: 0 0 30px !important;
+}
+
+input[type="submit"]:hover{
+    border: 1px solid white !important;
+    transform: scale(1.1) !important;
+    transition: .5s !important;
+}
+
+.top-nav{
+    background-color: transparent ;
+}
+
+.top-nav-title span {
+    color: gainsboro;
+}
+
+.time{
+    display: flex;
+    align-items: baseline;
+    font-size: 2rem;
+    color: gainsboro
+}
+
+.message{
+    max-width: 800px;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .main{
+        left: 1%;
+        padding: 0 10px;
+    }
+    .center{
+        width: auto;
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main{
+        left: 0%;
+        padding: 0 5px;
+    }
+    .center{
+        width: auto;
+        max-width: 600px;
+        padding: 15px 5px;
+    }
+
+    .center h1{
+        font-size: 2.5rem;
+    }
+
+    .center form{
+        padding: 0 20px;
+    }
+
+    .campoTexto label{
+        font-size: 1.7rem;
+    }
+
+    .campoTexto input{
+        font-size: 1.7rem;
+    }
+
+    .campoTexto input:focus ~ label,
+    .campoTexto input:valid ~ label{
+        padding-left: 5;
+        top: -5px;
+        font-size: 1.7rem;
+    }
+
+    input[type="submit"]{
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .center{
+        width: auto;
+        max-width: 400px;
+    }
+
+    .center h1{
+        font-size: 2rem;
+    }
+
+    .campoTexto label{
+        font-size: 1.5rem;
+    }
+
+    .campoTexto input{
+        font-size: 1.5rem;
+    }
+
+    .campoTexto input:focus ~ label,
+    .campoTexto input:valid ~ label{
+        padding-left: 0;
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"]{
+        font-size: 1.5rem !important;
+    }
+}
