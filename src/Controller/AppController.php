@@ -122,14 +122,6 @@ class AppController extends Controller
         return $this->Auth->user();
     }
 
-    //Comentario Darío ***********************************************************
-    //Autenticación de Usuarios Paso # 7. Ver Paso # 8 en SRC → Controller → UsersController
-    //Se establece una autorización básica a todas las rutas en todos los usuarios.
-    // public function isAuthorized($user)
-    // {
-    //     return true;
-    // }
-
     //* Código Darío. →→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
     //Este método permite filtrar las páginas según cada rol. //Este método también debe implementarse en cada controlador.
     public function isAuthorized($user){

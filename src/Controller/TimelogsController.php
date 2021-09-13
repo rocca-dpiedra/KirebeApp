@@ -38,17 +38,17 @@ class TimelogsController extends AppController
     */
      public function isAuthorized($user){
          if (isset($user['role'])and $user['role'] === 'admin'){
-             if(in_array($this->request->getParam('action'),['index','add','view','edit','repindex', 'activeList', 'projectRes', 'eal']))
+             if(in_array($this->request->getParam('action'),['repCustom','personalizado','projectRes','userRes','projectDetail','activeList', 'epr','eur', 'erd','eal','erc']))
              {
                  return true;
              }
          }
-         if (isset($user['role'])and $user['role'] === 'usuario'){
-            if(in_array($this->request->getParam('action'),['index','view']))
-            {
-                return true;
-            }
-        }
+        //  if (isset($user['role'])and $user['role'] === 'usuario'){
+        //     if(in_array($this->request->getParam('action'),[]))
+        //     {
+        //         return true;
+        //     }
+        // }
          return parent::isAuthorized($user);
      }
 

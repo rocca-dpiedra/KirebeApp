@@ -56,7 +56,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * Este código se comenta y se crea una nueva línea que cargará la pantalla por defecto.
     */
     //$builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-    $builder->connect('/', ['controller' => 'Users', 'action' => 'index']);
+    $builder->connect('/', ['controller' => 'Users', 'action' => 'login']);
 
 
     /*

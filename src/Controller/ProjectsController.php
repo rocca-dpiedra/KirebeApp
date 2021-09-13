@@ -46,14 +46,14 @@ class ProjectsController extends AppController
      public function isAuthorized($user){
          //Set de Acciones para un administrador.
          if (isset($user['role'])and $user['role'] === 'admin'){
-             if(in_array($this->request->getParam('action'),['index','add','view','edit','list' ,'iniciar', 'terminar', 'elapsedTime']))
+             if(in_array($this->request->getParam('action'),['index','list','view','add','edit','iniciar', 'terminar', 'elapsedTime']))
              {
                  return true;
              }
          }
          //Set de Acciones para un usuario.
          if (isset($user['role'])and $user['role'] === 'usuario'){
-            if(in_array($this->request->getParam('action'),['index','view', 'list' ,'iniciar', 'terminar', 'elapsedTime']))
+            if(in_array($this->request->getParam('action'),['list' ,'iniciar', 'terminar', 'elapsedTime']))
             {
                 return true;
             }
@@ -320,22 +320,22 @@ class ProjectsController extends AppController
      * Función @terminar(), permite que se cree finalice el registro activo del usuario en la base de datos.
      * 
     */
-    public function terminar($id = null, $userA = null, $cita = null)
+    public function terminar($id = null, $userA = null, $sesion = null)
     {
         $this->request->allowMethod(['post']); //Se valida que la solicitud sea de tipo post.
         $project = $this->Projects->get($id);
         $user = $this->Projects->Users->get($userA);
-        $estado = $this->Projects->Timelogs->estado($cita);
+        $estado = $this->Projects->Timelogs->estado($sesion);
         if ($estado == true)
         {
             $final =  Chronos::now(); //Se crea una instancia con la fecha y tiempo actual.
-            $timelog = $this->Projects->Timelogs->get($cita);//Se crea una entidad de tipo Timelogs
+            $timelog = $this->Projects->Timelogs->get($sesion);//Se crea una entidad de tipo Timelogs
                 $timelog->status = 0;
                 $timelog->endtime = $final;
     
             if ($this->Projects->Timelogs->save($timelog)){ //Se intenta guardar la entidad creada.
-                $this->elapsedTime($cita);
-                $this->costlog($cita, $user->salary);
+                $this->elapsedTime($sesion);
+                $this->costlog($sesion, $user->salary);
                 $this->Flash->success(__('Se ha finalizado el registro del proyecto: ' . $project->name .' correctamente.'));
                 return $this->redirect(['action' => 'list']);
             }else{
