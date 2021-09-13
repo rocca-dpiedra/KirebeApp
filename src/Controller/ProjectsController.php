@@ -378,7 +378,7 @@ class ProjectsController extends AppController
      * Función @projectStatus(), permite cambiar el estado de un proyecto
      * 
     */
-    public function projectStatus($id = null, $status)
+    public function projectStatus($id = null, $status = null)
     {
         $this->request->allowMethod(['post']);
         $project = $this->Projects->get($id);
