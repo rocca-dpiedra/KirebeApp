@@ -7,7 +7,7 @@
 
 <?= $this->Html->css(['reports']) ?>
 
-<!-- Se Modifica para que la estructura tenga la barra lateral en todos las vistas -->
+<!-- Vista de Reporte -->
 <div class="row">
     <div class="column-responsive column-90">   
         <div class="timelogs index content">
