@@ -48,18 +48,13 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            //Comentario Darío ***********************************************************... Conexión a BD Paso # 1. Ver paso # 2 en Config→App.PHP.
-            /**
-             * Este código se comenta, para evitar interferencias con el archivo App.php
-             */
+            //Código comentado por Darío, es la BD de pruebas. ==============================
             // 'username' => 'my_app',
             // 'password' => 'secret',
-
             // 'database' => 'my_app',
 
 
             /*Código Comentado para Subirlo como pruebas!!!!!! Testear a ver qué tal sale todo!!! :D
-
             'host' => 'us-cdbr-east-04.cleardb.com', //Esta línea no estaba yo la agregué... Darío Deploy
             'username' => 'b7a604c51835b5',
             'password' => '96ddebab',
