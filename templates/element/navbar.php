@@ -80,7 +80,7 @@
                             <a href="<?= $this->Url->build('/timelogs/userRes') ?>" class="nav__dropdown-item"> Resumen Usuarios</a>
                             <a href="<?= $this->Url->build('/timelogs/projectDetail') ?>" class="nav__dropdown-item"> Detalle Sesiones</a>
                             <a href="<?= $this->Url->build('/timelogs/activeList') ?>" class="nav__dropdown-item"> Sesiones Activas</a>
-                            <a href="<?= $this->Url->build('/timelogs/repCustom') ?>" class="nav__dropdown-item"> Personalizado</a>
+                            <a href="<?= $this->Url->build('/timelogs/repcustom') ?>" class="nav__dropdown-item"> Personalizado</a>
                         </div>
 
                     </div>
