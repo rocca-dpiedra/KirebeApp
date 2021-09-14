@@ -38,7 +38,7 @@ class TimelogsController extends AppController
     */
      public function isAuthorized($user){
          if (isset($user['role'])and $user['role'] === 'admin'){
-             if(in_array($this->request->getParam('action'),['repCustom','personalizado','projectRes','userRes','projectDetail','activeList', 'epr','eur', 'erd','eal','erc']))
+             if(in_array($this->request->getParam('action'),['repcustom','personalizado','projectRes','userRes','projectDetail','activeList', 'epr','eur', 'erd','eal','erc']))
              {
                  return true;
              }
@@ -231,7 +231,7 @@ class TimelogsController extends AppController
      * Función @repCustom(), formulario que permite establecer los filtros requeridos para el reporte personalizado
      * 
     */
-    public function repCustom()
+    public function repcustom()
     {
         /**  ===================================================================================Comentario Darío ====================================================================
          * 
@@ -272,7 +272,7 @@ class TimelogsController extends AppController
 
     /**  ===================================================================================Comentario Darío ====================================================================
      * 
-     * Función @personalizado(), muestra el reporte en pantalla, con base a los parámetros definidos en el repCustom.
+     * Función @personalizado(), muestra el reporte en pantalla, con base a los parámetros definidos en el repcustom.
      * 
     */
    public function personalizado( $_projs, $_us, $st, $end)
