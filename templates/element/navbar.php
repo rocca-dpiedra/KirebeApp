@@ -2,7 +2,7 @@
 <div class="nav" id="navbar">
     <nav class="nav__container">
         <div>
-            <a href="<?= $this->Url->build('/users/miPerfil') ?>" class="nav__link nav__logo">
+            <a href="<?= $this->Url->build('/users/miperfil') ?>" class="nav__link nav__logo">
                 <i class="fas fa-compact-disc nav__icon"></i>
                 <span class="nav__logo-name"> <?= $current_user['fullname']?> </span>
             </a>

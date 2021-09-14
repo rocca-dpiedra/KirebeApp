@@ -127,7 +127,7 @@ class UsersController extends AppController
      * 
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function miPerfil()
+    public function miperfil()
     {
         /**  ===================================================================================Comentario Darío ====================================================================
          * 
