@@ -76,10 +76,10 @@
 
                     <div class="nav__dropdown-collapse">
                         <div class="nav__dropdown-content">
-                            <a href="<?= $this->Url->build('/timelogs/projectRes') ?>" class="nav__dropdown-item"> Resumen Proyectos</a>
-                            <a href="<?= $this->Url->build('/timelogs/userRes') ?>" class="nav__dropdown-item"> Resumen Usuarios</a>
-                            <a href="<?= $this->Url->build('/timelogs/projectDetail') ?>" class="nav__dropdown-item"> Detalle Sesiones</a>
-                            <a href="<?= $this->Url->build('/timelogs/activeList') ?>" class="nav__dropdown-item"> Sesiones Activas</a>
+                            <a href="<?= $this->Url->build('/timelogs/projectres') ?>" class="nav__dropdown-item"> Resumen Proyectos</a>
+                            <a href="<?= $this->Url->build('/timelogs/userres') ?>" class="nav__dropdown-item"> Resumen Usuarios</a>
+                            <a href="<?= $this->Url->build('/timelogs/projectdetail') ?>" class="nav__dropdown-item"> Detalle Sesiones</a>
+                            <a href="<?= $this->Url->build('/timelogs/activelist') ?>" class="nav__dropdown-item"> Sesiones Activas</a>
                             <a href="<?= $this->Url->build('/timelogs/repcustom') ?>" class="nav__dropdown-item"> Personalizado</a>
                         </div>
 

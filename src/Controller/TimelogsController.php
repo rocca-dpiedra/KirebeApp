@@ -38,7 +38,7 @@ class TimelogsController extends AppController
     */
      public function isAuthorized($user){
          if (isset($user['role'])and $user['role'] === 'admin'){
-             if(in_array($this->request->getParam('action'),['repcustom','personalizado','projectRes','userRes','projectDetail','activeList', 'epr','eur', 'erd','eal','erc']))
+             if(in_array($this->request->getParam('action'),['repcustom','personalizado','projectres','userres','projectdetail','activelist', 'epr','eur', 'erd','eal','erc']))
              {
                  return true;
              }
@@ -321,7 +321,7 @@ class TimelogsController extends AppController
      * Función @projectRes(), muestra el reporte en pantalla, correspondiente al resumen de los proyectos con sesiones cerradas.
      * 
     */
-    public function projectRes()
+    public function projectres()
     {
         /**  ===================================================================================Comentario Darío ====================================================================
          * 
@@ -369,7 +369,7 @@ class TimelogsController extends AppController
      * Función @userRes(), muestra el reporte en pantalla, correspondiente al resumen de los usuarios con sesiones cerradas.
      * 
     */
-    public function userRes()
+    public function userres()
     {
         /**  ===================================================================================Comentario Darío ====================================================================
          * 
@@ -411,10 +411,10 @@ class TimelogsController extends AppController
 
     /**  ===================================================================================Comentario Darío ====================================================================
      * 
-     * Función @userRes(), muestra el reporte en pantalla, correspondiente a la lista de sesiones terminadas en un rango de fechas.
+     * Función @projectdetail(), muestra el reporte en pantalla, correspondiente a la lista de sesiones terminadas en un rango de fechas.
      * 
     */
-    public function projectDetail()
+    public function projectdetail()
     {
         /**  ===================================================================================Comentario Darío ====================================================================
          * 
@@ -460,7 +460,7 @@ class TimelogsController extends AppController
      * Función @activeList(), muestra el reporte en pantalla, correspondiente a la lista de sesiones activas
      * 
     */
-    public function activeList()
+    public function activelist()
     {
         /**  ===================================================================================Comentario Darío ====================================================================
          * 

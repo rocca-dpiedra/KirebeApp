@@ -72,7 +72,6 @@
                                 <th><?= __('User Id') ?></th>
                                 <th><?= __('Salary') ?></th>
                                 <th><?= __('Status') ?></th>
-                                <th class="actions"><?= __('Actions') ?></th>
                             </tr>
                             <?php foreach ($user->users as $users) : ?>
                             <tr>
@@ -84,10 +83,6 @@
                                 <td><?= h($users->user_id) ?></td>
                                 <td><?= h($users->salary) ?></td>
                                 <td><?= h($users->status) ?></td>
-                                <td class="actions">
-                                    <?= $this->Html->link(__('View'), ['controller' => 'Users', 'action' => 'view', $users->id]) ?>
-                                    <?= $this->Html->link(__('Edit'), ['controller' => 'Users', 'action' => 'edit', $users->id]) ?>
-                                </td>
                             </tr>
                             <?php endforeach; ?>
                         </table>
@@ -106,7 +101,6 @@
                                 <th><?= __('Creado Por') ?></th>
                                 <th><?= __('Subsidiaria') ?></th>
                                 <th><?= __('Status') ?></th>
-                                <th class="actions"><?= __('Actions') ?></th>
                             </tr>
                             <?php foreach ($user->projects as $projects) : ?>
                             <tr>
@@ -116,10 +110,6 @@
                                 <td><?= h($projects->user_id) ?></td>
                                 <td><?= h($projects->subsidiary) ?></td>
                                 <td><?= $projects->status ? __('Activo') : __('Inactivo'); ?></td>
-                                <td class="actions">
-                                    <?= $this->Html->link(__('View'), ['controller' => 'Projects', 'action' => 'view', $projects->id],['class' => 'ver']) ?>
-                                    <?= $this->Html->link(__('Edit'), ['controller' => 'Projects', 'action' => 'edit', $projects->id],['class' => 'editar']) ?>
-                                </td>
                             </tr>
                             <?php endforeach; ?>
                         </table>
@@ -141,7 +131,6 @@
                             <th><?= __('Hora Cierre') ?></th>
                             <th><?= __('Transcurrido') ?></th>
                             <th><?= __('Costo') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
                         </tr>
                         <?php foreach ($user->timelogs as $timelogs) : ?>
                         <tr>
@@ -153,12 +142,6 @@
                             <td><?= h($timelogs->endtime) ?></td>
                             <td><?= h($timelogs->elapsedtime) ?></td>
                             <td><?= h($timelogs->cost) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Timelogs', 'action' => 'view', $timelogs->id], ['class' => 'ver']) ?>
-                                <?php if($current_user['role'] == 'superadmin') : ?>
-                                    <?= $this->Html->link(__('Edit'), ['controller' => 'Timelogs', 'action' => 'edit', $timelogs->id], ['class' => 'editar']) ?>
-                                <?php endif; ?>
-                            </td>
                         </tr>
                         <?php endforeach; ?>
                     </table>
