@@ -13,7 +13,7 @@
         <div class="timelogs index content">
             <h3><?= __('Reporte Personalizado') ?></h3>
             <div class="contenedor-formulario"> 
-                <?= $this->Form->create(null,['url'=>['action'=>'repCustom']]); ?>
+                <?= $this->Form->create(null,['url'=>['action'=>'repcustom']]); ?>
                 <div class="formulario"> 
                     <!-- Primera columna del filtro. -->
                     <div class="contenido">
