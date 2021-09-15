@@ -39,14 +39,14 @@ class UsersController extends AppController
 
      public function isAuthorized($user){
          if (isset($user['role'])and $user['role'] === 'admin'){
-             if(in_array($this->request->getParam('action'),['index','add','view','edit', 'miPerfil']))
+             if(in_array($this->request->getParam('action'),['index','add','view','edit', 'miperfil']))
              {
                  return true;
              }
          }
 
          if (isset($user['role'])and $user['role'] === 'usuario'){
-            if(in_array($this->request->getParam('action'),['miPerfil']))
+            if(in_array($this->request->getParam('action'),['miperfil']))
             {
                 return true;
             }
