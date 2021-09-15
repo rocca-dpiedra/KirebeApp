@@ -500,6 +500,8 @@ class TimelogsController extends AppController
 
         //Obtiene el usuario Actual.
         $actual = parent::user_Id();
+        //Obtiene la hora en la que se generó el reporte.
+        $hora = Chronos::now();
 
         //Obtiene la información desde BD.
         $consulta = $this->Timelogs->projectRes()
@@ -520,9 +522,12 @@ class TimelogsController extends AppController
         echo '<th colspan=6> Resumen de Proyectos</th>';
         echo '</tr>';
         echo '<tr>';
+        echo '<th colspan=3> Generado por: '.$actual['fullname'].'</th>';
+        echo '<th colspan=3> Generado a las: '.$hora.'</th>';
+        echo '</tr>';
+        echo '<tr>';
         echo '<th colspan=3> Fecha Inicio: '.$init. '</th>';
         echo '<th colspan=3> Fecha Final: '.$end. '</th>';
-        echo '<th colspan=6> Generado por: '.$actual['fullname'].'</th>';
         echo '</tr>';
         echo '<tr>';
         echo '<th>NOMBRE</th>';
@@ -551,6 +556,8 @@ class TimelogsController extends AppController
 
         //Obtiene el usuario Actual.
         $actual = parent::user_Id();
+        //Obtiene la hora en la que se generó el reporte.
+        $hora = Chronos::now();
 
         //Obtiene la información desde BD.
         $consulta = $this->Timelogs->userRes()
@@ -569,6 +576,10 @@ class TimelogsController extends AppController
         echo '<table border=1>';
         echo '<tr>';
         echo '<th colspan=6> Resumen de Usuarios</th>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<th colspan=3> Generado por: '.$actual['fullname'].'</th>';
+        echo '<th colspan=3> Generado a las: '.$hora.'</th>';
         echo '</tr>';
         echo '<tr>';
         echo '<th colspan=3> Fecha Inicio: '.$init. '</th>';
@@ -601,6 +612,8 @@ class TimelogsController extends AppController
 
         //Obtiene el usuario Actual.
         $actual = parent::user_Id();
+        //Obtiene la hora en la que se generó el reporte.
+        $hora = Chronos::now();
 
         //Obtiene la información desde BD.
         $consulta = $this->Timelogs->reportDetail()
@@ -619,6 +632,10 @@ class TimelogsController extends AppController
         echo '<table border=1>';
         echo '<tr>';
         echo '<th colspan=10> Detalle de Sesiones</th>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<th colspan=5> Generado por: '.$actual['fullname'].'</th>';
+        echo '<th colspan=5> Generado a las: '.$hora.'</th>';
         echo '</tr>';
         echo '<tr>';
         echo '<th colspan=5> Fecha Inicio: '.$init. '</th>';
@@ -732,6 +749,10 @@ class TimelogsController extends AppController
         echo '<table border=1>';
         echo '<tr>';
         echo '<th colspan=8> Reporte Personalizado</th>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<th colspan=4> Generado por: '.$actual['fullname'].'</th>';
+        echo '<th colspan=4> Generado a las: '.$hora.'</th>';
         echo '</tr>';
         echo '<tr>';
         echo '<th colspan=4> Fecha Inicio: '.$st. '</th>';
