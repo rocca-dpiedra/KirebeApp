@@ -13,7 +13,7 @@
             <?php if($mostrar) : ?>
                 <?= $this->Html->link(__('Exportar Excel'), ['controller' => 'Timelogs', 'action' => 'erd', $init, $end],['class' => 'button float-right','id' => 'exportar']) ?>
             <?php else: ?>
-                <p> Filtrado por fecha, muestra el detalle de las sesiones finalizadas, tiempos y costo por proyecto y usuario</p>
+                <span> Filtrado por fecha, muestra el detalle de las sesiones finalizadas, tiempos y costo por proyecto y usuario</span>
             <?php endif; ?>
             <?php if($mostrar) : ?>
             <div class="table-responsive">
@@ -50,10 +50,6 @@
             <div class="paginator">
                 <?=$this->Element('paginator'); ?>
             </div>
-            <?php else : ?>
-                <div>
-                    <p> Para visualizar el reporte debe definir el rango de fechas deseado.</p>
-                </div>
             <?php endif; ?>
         </div>
         <div class="content">

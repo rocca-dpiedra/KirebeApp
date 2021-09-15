@@ -81,6 +81,12 @@ input[type=checkbox] {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    label{
+        font-size: 1.8rem;
+        line-height: 1.4rem;
+    }
+    
+
     .grupo1, .grupo2{
         height: 30rem;
         border-right: 1px solid black;
@@ -110,6 +116,12 @@ input[type=checkbox] {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    label{
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+    }
+
     .fechas{
         grid-column: auto;
         height: 22rem;
@@ -123,6 +135,15 @@ input[type=checkbox] {
         grid-row: auto;
         margin-top: 1rem;
     }
+}
+
+
+@media screen and (max-width: 768px){
+    label{
+        font-size: 1.5rem;
+        line-height: 1.3rem;
+    }
+    
 }
 
 
