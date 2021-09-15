@@ -12,6 +12,7 @@
     <div class="column-responsive column-90">   
         <div class="timelogs index content">
             <h3><?= __('Reporte Personalizado') ?></h3>
+            <p> Muestra el detalle de las sesiones filtrado por proyecto, usuario y fechas a consultar.</p>
             <div class="contenedor-formulario"> 
                 <?= $this->Form->create(null,['url'=>['action'=>'repcustom']]); ?>
                 <div class="formulario"> 

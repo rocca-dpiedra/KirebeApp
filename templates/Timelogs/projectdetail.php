@@ -12,6 +12,8 @@
             <h3><?= __('Reporte Detallado.') ?></h3>
             <?php if($mostrar) : ?>
                 <?= $this->Html->link(__('Exportar Excel'), ['controller' => 'Timelogs', 'action' => 'erd', $init, $end],['class' => 'button float-right','id' => 'exportar']) ?>
+            <?php else: ?>
+                <p> Filtrado por fecha, muestra el detalle de las sesiones finalizadas, tiempos y costo por proyecto y usuario</p>
             <?php endif; ?>
             <?php if($mostrar) : ?>
             <div class="table-responsive">
@@ -58,7 +60,7 @@
         <?= $this->Form->Create(null, ['type' => 'get']); ?>
             <!-- Tercer Columna del filtro -->
             <div class="table-responsive">
-                <label class="date-label">3- Seleccione Rango de Fechas.</label>
+                <label class="date-label">Seleccione Rango de Fechas.</label>
                 <table class="tabla-form">
                     <thead>
                         <tr>
