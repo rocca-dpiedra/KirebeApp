@@ -25,7 +25,7 @@
                             'usuario' => 'Usuario',
                         ]]);
                     else :
-                        if($current_user['id'] == $user->id):
+                        if($user->role == 'admin'):
                             echo $this->Form->control('role', ['label' => 'Rol', 'options' => [
                                 'admin' => 'Administrador',
                                 'usuario' => 'Usuario',
